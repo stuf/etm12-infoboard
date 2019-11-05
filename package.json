@@ -35,7 +35,17 @@
     "@types/react-router-dom": "^5.1.2",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.1",
+    "enzyme-to-json": "^3.4.3",
     "node-sass": "^4.13.0"
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "collectCoverageFrom": [
+      "!src/index.js",
+      "!src/scenes/index.js"
+    ]
   },
   "eslintConfig": {
     "extends": "react-app"
