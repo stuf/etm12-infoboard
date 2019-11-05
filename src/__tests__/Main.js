@@ -8,7 +8,11 @@ describe("Main", () => {
     const wrapper = mount(<Main />);
   });
 
-  it("should display error message if default state is not valid", () => {
+  it.skip("should display error message if default state is not valid", () => {
+    const wrapper = mount(<Main />);
+  });
+
+  it.skip("should display a '' error when page doesn't exist", () => {
     const wrapper = mount(<Main />);
   });
 });
