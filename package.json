@@ -18,6 +18,7 @@
     "kefir.partial.lenses.validation": "^2.0.0",
     "kefir.ramda": "^0.26.0",
     "lint-staged": "^9.4.2",
+    "normalize.css": "^8.0.1",
     "prettier": "^1.18.2",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
