@@ -1,5 +1,5 @@
 {
-  "name": "etm12-postit-app",
+  "name": "@stuf/etm12-postit-app",
   "version": "0.1.0",
   "private": true,
   "scripts": {
