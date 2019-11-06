@@ -45,7 +45,9 @@
     ],
     "collectCoverageFrom": [
       "!src/index.js",
-      "!src/scenes/index.js"
+      "!src/scenes/index.js",
+      "!src/common/test-utils.js",
+      "!src/test/*.js"
     ]
   },
   "eslintConfig": {
