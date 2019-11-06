@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Error pages InvalidState matches snapshot 1`] = `
+<InvalidState>
+  <section>
+    <h1>
+      Oh no!
+    </h1>
+    <h2>
+      Invalid state data
+    </h2>
+    <p>
+      It seems as the state the application is in is not valid. It's currently:
+    </p>
+    <pre>
+      <code />
+    </pre>
+  </section>
+</InvalidState>
+`;
+
+exports[`Error pages NotFound matches snapshot 1`] = `
+<NotFound>
+  <section>
+    Not found :(((
+  </section>
+</NotFound>
+`;
