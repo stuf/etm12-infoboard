@@ -1,4 +1,9 @@
+$card-border-color: rgba(#000, 0.3) !default;
+$card-border: solid 2px $card-border-color !default;
+$card-bg: rgba(#fff, 1) !default;
+
 .card {
-  border: solid 1px #f00;
+  border: $card-border;
   position: absolute;
+  background: $card-bg;
 }
