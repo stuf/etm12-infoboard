@@ -1,5 +1,7 @@
-import { isArray, isDefined } from "common/validators";
+import * as V from 'kefir.partial.lenses.validation';
 
-export const requiresArray = [isArray, "requires array"];
+import { isArray, isDefined } from 'common/validators';
 
-export const mustBeDefined = [isDefined, "required non-null and non-undefined"];
+export const requiresArray = [isArray, 'requires array'];
+
+export const mustBeDefined = [isDefined, 'required non-null and non-undefined'];
