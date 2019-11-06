@@ -6,6 +6,7 @@ import { mustBeDefined, requiresArray } from 'common/rules';
 const initialState = {
   items: [
     {
+      id: '4ec868f0-00bc-11ea-8a75-bf599f3916ed',
       title: 'A title',
       body: 'A body and then some\n\n# heading\n\nand some more text',
       position: [10, 10],
@@ -16,6 +17,7 @@ const initialState = {
       },
     },
     {
+      id: '54258c60-00bc-11ea-8a75-bf599f3916ed',
       title: 'Another',
       body: 'Text goes here and it goes there',
       position: [400, 120],
@@ -26,6 +28,7 @@ const initialState = {
       },
     },
     {
+      id: '59d11df0-00bc-11ea-8a75-bf599f3916ed',
       title: 'Smol boi',
       body: 'hi',
       position: [200, 200],

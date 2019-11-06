@@ -6,7 +6,7 @@ import { fstIn, sndIn } from 'common/meta';
 
 export default function Card(props) {
   const dom = U.variable();
-  const { item } = props;
+  const { item, onSelectFn = a => a } = props;
 
   const { position, size, title, body, flags } = U.destructure(item);
   const { editing, locked } = U.destructure(flags);
@@ -27,7 +27,11 @@ export default function Card(props) {
       <div className="cardBody">{body}</div>
 
       <div className="cardControls">
-        <button onClick={U.doModify(editing, R.not)}>E</button>
+        <button
+          onClick={U.actions(U.doModify(editing, R.not), onSelectFn(item))}
+        >
+          E
+        </button>
         <button onClick={U.doModify(locked, R.not)}>L</button>
         <button onClick={U.doRemove(item)}>D</button>
       </div>
