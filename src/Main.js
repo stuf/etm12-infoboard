@@ -16,6 +16,10 @@ export default function Main(props) {
             path="/board"
             component={WithRootProps(Scene.Board, { state })}
           />
+          <Route
+            path="/error/state"
+            component={WithRootProps(Scene.ErrorPage.InvalidState, { state })}
+          />
           <Route path="/" component={Scene.Splash} />
           <Route component={Scene.ErrorPage.NotFound} />
         </Switch>
