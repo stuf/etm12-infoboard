@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "husky": "^3.0.9",
+    "insane": "^2.6.2",
     "jsverify": "^0.8.4",
     "karet": "^4.1.0",
     "karet.util": "^0.19.1",
@@ -18,6 +19,7 @@
     "kefir.partial.lenses.validation": "^2.0.0",
     "kefir.ramda": "^0.26.0",
     "lint-staged": "^9.4.2",
+    "marked": "^0.7.0",
     "normalize.css": "^8.0.1",
     "prettier": "^1.18.2",
     "react": "^16.11.0",
@@ -77,5 +79,8 @@
       "prettier --write",
       "git add"
     ]
+  },
+  "optionalDependencies": {
+    "@types/marked": "^0.7.0"
   }
 }
