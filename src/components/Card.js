@@ -3,12 +3,20 @@ import * as U from 'karet.util';
 import * as R from 'kefir.ramda';
 
 import { fstIn, sndIn } from 'common/meta';
+import CardView from 'components/CardView';
+import CardEdit from 'components/CardEdit';
+
+const EDIT_SYMBOL = '✎';
+
+const LOCK_SYMBOL_CLOSED = '🔒';
+const LOCK_SYMBOL_OPEN = '🔓';
+
+const DELETE_SYMBOL = '🗑';
 
 export default function Card(props) {
-  const dom = U.variable();
-  const { item, onSelectFn = a => a } = props;
+  const { item } = props;
 
-  const { position, size, title, body, flags } = U.destructure(item);
+  const { position, size, flags } = U.destructure(item);
   const { editing, locked } = U.destructure(flags);
 
   const cardStyle = U.template({
@@ -21,19 +29,21 @@ export default function Card(props) {
   //
 
   return (
-    <article className="card cardRoot" style={cardStyle} ref={U.refTo(dom)}>
-      <header className="cardHeader">{title}</header>
+    <article className="card card__root" style={cardStyle}>
+      <div className="card__body">
+        {U.ifElse(editing, <CardEdit item={item} />, <CardView item={item} />)}
+      </div>
 
-      <div className="cardBody">{body}</div>
-
-      <div className="cardControls">
-        <button
-          onClick={U.actions(U.doModify(editing, R.not), onSelectFn(item))}
-        >
-          E
+      <div className="card__controls">
+        <button disabled={locked} onClick={U.doModify(editing, R.not)}>
+          {EDIT_SYMBOL}
         </button>
-        <button onClick={U.doModify(locked, R.not)}>L</button>
-        <button onClick={U.doRemove(item)}>D</button>
+        <button onClick={U.doModify(locked, R.not)}>
+          {U.ifElse(locked, LOCK_SYMBOL_OPEN, LOCK_SYMBOL_CLOSED)}
+        </button>
+        <button disabled={locked} onClick={U.doRemove(item)}>
+          {DELETE_SYMBOL}
+        </button>
       </div>
     </article>
   );
