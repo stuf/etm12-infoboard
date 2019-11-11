@@ -1,6 +1,11 @@
 import * as J from 'jsverify';
+import * as V from 'kefir.partial.lenses';
 
 const genArbSampler = (def, size = 10) => [def, J.sampler(def, size)];
+
+const genValidator = rules => V.errors(rules);
+
+const genThrowingValidator = rules => V.validate(rules);
 
 //
 
