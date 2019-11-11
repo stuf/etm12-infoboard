@@ -1,6 +1,13 @@
+@import 'variables';
+
+@import 'base';
 @import 'board';
 
+@import 'components/_index';
+
 @import 'card';
+
+@import 'form';
 
 .appRoot {
   border: solid 1px #f00;

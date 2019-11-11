@@ -1,0 +1,24 @@
+$markdown-base-spacing: 0 !default;
+$markdown-sibling-spacing: 1rem !default;
+
+.markdown {
+  &--empty {
+    border: dotted 1px #00f;
+  }
+}
+
+.markdown__content {
+  > * {
+    margin: $markdown-base-spacing;
+  }
+
+  > * + * {
+    margin-top: $markdown-sibling-spacing;
+  }
+
+  font-size: $font-size-small;
+
+  h1 {
+    font-size: $font-size-normal;
+  }
+}
